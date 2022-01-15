@@ -32,6 +32,10 @@
 \checkandfixthelayout
 % ---------------------------------------
 
+% ----------- cover page background -----
+\RequirePackage{eso-pic}
+% ---------------------------------------
+
 % ----------- typesetting ---------------
 \usepackage{microtype}		% this package makes micro adjustments to reduce need for hyphenation
 % ---------------------------------------
@@ -407,6 +411,7 @@
 		\@department \\
 		\@degree} \\
 		\vspace{\fill}
+		\AddToShipoutPictureBG*{\includegraphics[width=\paperwidth]{figures/cover}}
 		\begin{figure}[htbp]
 			\includegraphics[width=3.5in]{figures/college_logo}
 		\end{figure}
