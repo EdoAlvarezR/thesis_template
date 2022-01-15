@@ -553,6 +553,12 @@
   \clearfield{number}%
   \clearfield{journaltitle}%
   \clearfield{booktitle}%
+  \clearfield{month}%
+  \clearfield{url}%
+  \clearfield{isbn}%
+  \clearfield{issn}%
+  \clearfield{doi}%
+  \clearfield{eprint}%
 }
 % ---------------------------------------
 
