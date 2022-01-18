@@ -525,7 +525,7 @@
 
 % -------- figures ------------
 \RequirePackage{graphicx}
-\sidecapmargin{right} %this puts the sidecaptions in the right margin
+\sidecapmargin{outer} %this puts the sidecaptions in the outer margin
 \setsidecappos{b} %this aligns the side caption with the bottom of the figure
 \setsidecaps{0.125in}{2.0in} %this controls the spacing from the edge of the text, and then the width of the box the caption sits in.
 %this makes the name of the caption (e.g. Figure 1) bold, small, and blue (the number and word are controlled with separate commands)
