@@ -197,6 +197,8 @@
 \renewcommand{\printlottitle}[1]{\normalfont\LARGE\sffamily\colorchaptitle\itshape #1}
 
 % put page number right after in toc, lof, lot
+\renewcommand{\cftpartleader}{}
+\renewcommand{\cftpartafterpnum}{\cftparfillskip}
 \renewcommand{\cftchapterleader}{}
 \renewcommand{\cftchapterafterpnum}{\cftparfillskip}
 %\renewcommand{\cftchapterafterpnum}{\hsp}
@@ -208,11 +210,13 @@
 \renewcommand{\cfttableafterpnum}{\cftparfillskip}
 
 % unbold titles in toc
+% \renewcommand\cftpartfont{\bfseries\color{royal}}
 \renewcommand{\cftchapterfont}{}
 %\renewcommand{\cftchapterpagefont}{\color{royal}}	% make page entries on ToC, LoF, LoT royal blue in color
 %\renewcommand{\cftsectionpagefont}{\color{royal}}
 %\renewcommand{\cftfigurepagefont}{\color{royal}}
 %\renewcommand{\cfttablepagefont}{\color{royal}}
+% \renewcommand{\cftpartpagefont}{\color{black}}
 \renewcommand{\cftchapterpagefont}{\color{black}}   % make page entries on ToC, LoF, LoT black in color
 \renewcommand{\cftsectionpagefont}{\color{black}}
 \renewcommand{\cftfigurepagefont}{\color{black}}
@@ -246,6 +250,7 @@
 %\createmark{chapter}{both}{nonumber}{}{}
 \createmark{chapter}{left}{nonumber}{}{}
 \createmark{section}{right}{shownumber}{}{. \space}
+% \createmark{part}{both}{shownumber}{\partname\space}{:\space}
 \createplainmark{toc}{both}{\contentsname}
 \createplainmark{lof}{both}{\listfigurename}
 \createplainmark{lot}{both}{\listtablename}
