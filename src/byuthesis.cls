@@ -210,7 +210,6 @@
 \renewcommand{\cfttableafterpnum}{\cftparfillskip}
 
 % unbold titles in toc
-% \renewcommand\cftpartfont{\bfseries\color{royal}}
 \renewcommand{\cftchapterfont}{}
 %\renewcommand{\cftchapterpagefont}{\color{royal}}	% make page entries on ToC, LoF, LoT royal blue in color
 %\renewcommand{\cftsectionpagefont}{\color{royal}}
@@ -221,6 +220,7 @@
 \renewcommand{\cftsectionpagefont}{\color{black}}
 \renewcommand{\cftfigurepagefont}{\color{black}}
 \renewcommand{\cfttablepagefont}{\color{black}}
+\renewcommand{\cftpartpagefont}{\color{white}}      % Hide page in Part
 % ----------------------------------------
 
 %----------- figure captions -------------
@@ -482,6 +482,37 @@
 \setmarginnotes{0.125in}{2.0in}{\onelineskip}
 % ---------------------------------------
 
+% --------------- Part Page Format ---------------
+\renewcommand\part{%
+	\cleardoublepage
+	\setlrmarginsandblock{1.75in}{1.75in}{*}
+	\checkandfixthelayout
+	\thispagestyle{empty}
+	\if@twocolumn
+	\onecolumn
+	\@tempswatrue
+	\else
+	\@tempswafalse
+	\fi
+	\null\vfil
+	\secdef\@part\@spart
+	}
+\renewcommand*{\thepart}{\Roman{part}}
+\renewcommand*{\partnamefont}{\normalfont\LARGE\sffamily\bfseries\colorchaptitle}
+\renewcommand*{\partnumfont}{\normalfont\LARGE\sffamily\bfseries\colorchaptitle}
+\renewcommand*{\parttitlefont}{\normalfont\Huge\sffamily\colorchaptitle}
+
+\newcommand{\sectionquote}{\@empty}
+\newcommand*{\@printsectionquote}[1]{{\color{mediumgray}#1}}
+
+\renewcommand*{\afterpartskip}{%
+	\vskip 20pt plus 0.7fil \@printsectionquote{\sectionquote}
+	\newpage
+	\setlrmarginsandblock{1.0in}{2.75in}{*}
+	\checkandfixthelayout
+	\setmarginnotes{0.125in}{2.0in}{\onelineskip}}
+% ----------------------------------------
+
 % -------------- chapter ----------------
 % Revise the chapter style to create a fancier heading
 \newcommand{\mhsp}{\hspace{10pt}}
@@ -575,4 +606,3 @@
 % -------------------------------------
 
 \fi
-
