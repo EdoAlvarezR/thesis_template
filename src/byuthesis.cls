@@ -489,12 +489,15 @@
 	\setlength{\beforechapskip}{54pt}
 	\setlength{\afterchapskip}{48pt}
 	\renewcommand*{\chapnamefont}{\normalfont\LARGE\itshape}
-	\renewcommand*{\chapnumfont}{\normalfont\LARGE\sffamily\itshape\colorchapnum}
+	\renewcommand*{\chapnumfont}{\normalfont\LARGE\sffamily\bfseries\colorchapnum}
 	\renewcommand*{\chaptitlefont}{\normalfont\LARGE\sffamily\itshape\colorchaptitle}
 	\renewcommand*{\afterchapternum}{}
 	\renewcommand*{\printchaptername}{}
 	\setlength{\midchapskip}{15mm}
-	\renewcommand*{\chapternamenum}{}
+	% \renewcommand*{\chapternamenum}{}
+	\renewcommand*{\chapternamenum}{%
+		\sidebar{\raisebox{-86.5pt}[0pt][0pt]{\rotatebox[origin=c]{90}{%
+					\resizebox{\midchapskip}{12pt}{\sffamily\colorchaptitle Chapter}}}}}
 	\renewcommand*{\printchapternum}{%
 		\sidebar{\raisebox{-76pt}[0pt][0pt]{\makebox[0pt][l]{%
 					\resizebox{!}{\midchapskip}{\mhsp\chapnumfont\thechapter}}}}}
