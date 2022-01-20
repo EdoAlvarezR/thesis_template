@@ -160,9 +160,6 @@
 %	\renewcommand*{\chapnumfont}{\normalfont\LARGE\sffamily\itshape\colorchapnum}
 %	\renewcommand*{\printchaptername}{}		% We don't print the word "Appendix"
 %	\renewcommand*{\chapternamenum}{}		% No space inserted after "Appendix" and before \chapnum
-	\renewcommand*{\chapternamenum}{%
-		\sidebar{\raisebox{-86.5pt}[0pt][0pt]{\rotatebox[origin=c]{90}{%
-					\resizebox{\midchapskip}{11pt}{\sffamily\colorchaptitle Appendix}}}}}
 }
 
 \RequirePackage{etoolbox}		% provides \appto command used below (append to)
@@ -200,8 +197,6 @@
 \renewcommand{\printlottitle}[1]{\normalfont\LARGE\sffamily\colorchaptitle\itshape #1}
 
 % put page number right after in toc, lof, lot
-\renewcommand{\cftpartleader}{}
-\renewcommand{\cftpartafterpnum}{\cftparfillskip}
 \renewcommand{\cftchapterleader}{}
 \renewcommand{\cftchapterafterpnum}{\cftparfillskip}
 %\renewcommand{\cftchapterafterpnum}{\hsp}
@@ -218,12 +213,10 @@
 %\renewcommand{\cftsectionpagefont}{\color{royal}}
 %\renewcommand{\cftfigurepagefont}{\color{royal}}
 %\renewcommand{\cfttablepagefont}{\color{royal}}
-% \renewcommand{\cftpartpagefont}{\color{black}}
 \renewcommand{\cftchapterpagefont}{\color{black}}   % make page entries on ToC, LoF, LoT black in color
 \renewcommand{\cftsectionpagefont}{\color{black}}
 \renewcommand{\cftfigurepagefont}{\color{black}}
 \renewcommand{\cfttablepagefont}{\color{black}}
-\renewcommand{\cftpartpagefont}{\color{white}}      % Hide page in Part
 % ----------------------------------------
 
 %----------- figure captions -------------
@@ -253,7 +246,6 @@
 %\createmark{chapter}{both}{nonumber}{}{}
 \createmark{chapter}{left}{nonumber}{}{}
 \createmark{section}{right}{shownumber}{}{. \space}
-% \createmark{part}{both}{shownumber}{\partname\space}{:\space}
 \createplainmark{toc}{both}{\contentsname}
 \createplainmark{lof}{both}{\listfigurename}
 \createplainmark{lot}{both}{\listtablename}
@@ -485,37 +477,6 @@
 \setmarginnotes{0.125in}{2.0in}{\onelineskip}
 % ---------------------------------------
 
-% --------------- Part Page Format ---------------
-\renewcommand\part{%
-	\cleardoublepage
-	\setlrmarginsandblock{1.75in}{1.75in}{*}
-	\checkandfixthelayout
-	\thispagestyle{empty}
-	\if@twocolumn
-	\onecolumn
-	\@tempswatrue
-	\else
-	\@tempswafalse
-	\fi
-	\null\vfil
-	\secdef\@part\@spart
-	}
-\renewcommand*{\thepart}{\Roman{part}}
-\renewcommand*{\partnamefont}{\normalfont\LARGE\sffamily\bfseries\colorchaptitle}
-\renewcommand*{\partnumfont}{\normalfont\LARGE\sffamily\bfseries\colorchaptitle}
-\renewcommand*{\parttitlefont}{\normalfont\Huge\sffamily\colorchaptitle}
-
-\newcommand{\sectionquote}{\@empty}
-\newcommand*{\@printsectionquote}[1]{{\color{mediumgray}#1}}
-
-\renewcommand*{\afterpartskip}{%
-	\vskip 20pt plus 0.7fil \@printsectionquote{\sectionquote}
-	\newpage
-	\setlrmarginsandblock{1.0in}{2.75in}{*}
-	\checkandfixthelayout
-	\setmarginnotes{0.125in}{2.0in}{\onelineskip}}
-% ----------------------------------------
-
 % -------------- chapter ----------------
 % Revise the chapter style to create a fancier heading
 \newcommand{\mhsp}{\hspace{10pt}}
@@ -523,15 +484,12 @@
 	\setlength{\beforechapskip}{54pt}
 	\setlength{\afterchapskip}{48pt}
 	\renewcommand*{\chapnamefont}{\normalfont\LARGE\itshape}
-	\renewcommand*{\chapnumfont}{\normalfont\LARGE\sffamily\bfseries\colorchapnum}
+	\renewcommand*{\chapnumfont}{\normalfont\LARGE\sffamily\itshape\colorchapnum}
 	\renewcommand*{\chaptitlefont}{\normalfont\LARGE\sffamily\itshape\colorchaptitle}
 	\renewcommand*{\afterchapternum}{}
 	\renewcommand*{\printchaptername}{}
 	\setlength{\midchapskip}{15mm}
-	% \renewcommand*{\chapternamenum}{}
-	\renewcommand*{\chapternamenum}{%
-		\sidebar{\raisebox{-86.5pt}[0pt][0pt]{\rotatebox[origin=c]{90}{%
-					\resizebox{\midchapskip}{12pt}{\sffamily\colorchaptitle Chapter}}}}}
+	\renewcommand*{\chapternamenum}{}
 	\renewcommand*{\printchapternum}{%
 		\sidebar{\raisebox{-76pt}[0pt][0pt]{\makebox[0pt][l]{%
 					\resizebox{!}{\midchapskip}{\mhsp\chapnumfont\thechapter}}}}}
@@ -567,7 +525,7 @@
 
 % -------- figures ------------
 \RequirePackage{graphicx}
-\sidecapmargin{outer} %this puts the sidecaptions in the outer margin
+\sidecapmargin{right} %this puts the sidecaptions in the right margin
 \setsidecappos{b} %this aligns the side caption with the bottom of the figure
 \setsidecaps{0.125in}{2.0in} %this controls the spacing from the edge of the text, and then the width of the box the caption sits in.
 %this makes the name of the caption (e.g. Figure 1) bold, small, and blue (the number and word are controlled with separate commands)
@@ -609,3 +567,4 @@
 % -------------------------------------
 
 \fi
+
