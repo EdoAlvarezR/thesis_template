@@ -199,6 +199,10 @@
 \renewcommand{\printloftitle}[1]{\normalfont\LARGE\sffamily\colorchaptitle\itshape #1}
 \renewcommand{\printlottitle}[1]{\normalfont\LARGE\sffamily\colorchaptitle\itshape #1}
 
+% add "Part n:" to  parts in toc
+\renewcommand*{\cftpartname}{PART\space}
+\renewcommand*{\cftpartaftersnum}{:}
+
 % put page number right after in toc, lof, lot
 \renewcommand{\cftpartleader}{}
 \renewcommand{\cftpartafterpnum}{\cftparfillskip}
