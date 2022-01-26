@@ -509,11 +509,11 @@
 \renewcommand*{\partnumfont}{\normalfont\LARGE\sffamily\bfseries\colorchaptitle}
 \renewcommand*{\parttitlefont}{\normalfont\Huge\sffamily\colorchaptitle}
 
-\newcommand{\sectionquote}{\@empty}
-\newcommand*{\@printsectionquote}[1]{{\color{mediumgray}#1}}
+\newcommand{\partabstract}{\@empty}
+\newcommand*{\@printpartabstract}[1]{{\color{mediumgray}#1}}
 
 \renewcommand*{\afterpartskip}{%
-	\vskip 20pt plus 0.7fil \@printsectionquote{\sectionquote}
+	\vskip 20pt plus 0.7fil \@printpartabstract{\partabstract}
 	\newpage
 	\setlrmarginsandblock{1.0in}{2.75in}{*}
 	\checkandfixthelayout
