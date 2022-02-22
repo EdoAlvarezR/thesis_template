@@ -1,3 +1,6 @@
+# Script for building the template files from the terminal
+
+# Create build directory
 rm -rf build
 cp -r src build
 
