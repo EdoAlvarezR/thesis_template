@@ -582,7 +582,7 @@
 
 % ----------- bibliography --------------
 % setup biblatex, specify citation and bibliography styles
-\usepackage[citestyle=verbose-ibid,maxcitenames=1,mincitenames=1,giveninits=true,backend=biber,bibstyle=ieee,sorting=none]{biblatex}
+\usepackage[citestyle=verbose-ibid,maxcitenames=1,mincitenames=1,giveninits=true,backend=biber,bibstyle=ieee,sorting=none,uniquelist=true]{biblatex}
 \DeclareFieldFormat{labelnumberwidth}{\color{primary}#1}%
 \setlength{\biblabelsep}{8pt}%
 \renewbibmacro{in:}{}
