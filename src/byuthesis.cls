@@ -204,17 +204,19 @@
 \renewcommand*{\cftpartaftersnum}{:}
 
 % put page number right after in toc, lof, lot
-\renewcommand{\cftpartleader}{}
+% \renewcommand{\cftpartleader}{\;\;\;}
 \renewcommand{\cftpartafterpnum}{\cftparfillskip}
-\renewcommand{\cftchapterleader}{}
+% \renewcommand{\cftchapterleader}{\;\;}
 \renewcommand{\cftchapterafterpnum}{\cftparfillskip}
 %\renewcommand{\cftchapterafterpnum}{\hsp}
-\renewcommand{\cftsectionleader}{}
+% \renewcommand{\cftsectionleader}{\;\;}
 \renewcommand{\cftsectionafterpnum}{\cftparfillskip}
-\renewcommand{\cftfigureleader}{}
+\renewcommand{\cftfigureleader}{\;\;}
 \renewcommand{\cftfigureafterpnum}{\cftparfillskip}
-\renewcommand{\cfttableleader}{}
+\renewcommand{\cfttableleader}{\;\;}
 \renewcommand{\cfttableafterpnum}{\cftparfillskip}
+
+% \setpnumwidth{0.0em}  % This, along with \;\; in \cft__leader define the spacing between title and page number
 
 % unbold titles in toc
 \renewcommand{\cftchapterfont}{}
