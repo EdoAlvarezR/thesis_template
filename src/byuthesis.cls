@@ -413,7 +413,8 @@
 \newcommand{\customtitlepage}{%
 	\pagestyle{empty}
 	\begin{Spacing}{2.2}
-		\vspace*{116pt}
+		% \vspace*{116pt}
+		\vspace*{75pt}
 		\noindent
 		{\color{royal}\Huge\sffamily\itshape\@customtitle} \\
 		\vspace{\fill}
