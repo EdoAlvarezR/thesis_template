@@ -549,6 +549,8 @@
 % ---------------------------------------
 
 % ------------- footnotes ----------------
+\RequirePackage{marginfix}							% This package fixes the issue of margin notes overflowing the page: it makes them break into the next page instead
+
 % we place footnotes in the side margin and typeset them using the parameters associated with \footnotes
 % \sidefootnotes are treated separately
 %\renewcommand{\@makefntext}[1]{\makefootmark\raggedright #1}. % allow footnotes to be ragged right
