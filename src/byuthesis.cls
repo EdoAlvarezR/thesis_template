@@ -159,10 +159,10 @@
 %  	\renewcommand*{\chapnamefont}{\normalfont\LARGE\sffamily\itshape\colorchapnum}
 %	\renewcommand*{\chapnumfont}{\normalfont\LARGE\sffamily\itshape\colorchapnum}
 %	\renewcommand*{\printchaptername}{}		% We don't print the word "Appendix"
-%	\renewcommand*{\chapternamenum}{}		% No space inserted after "Appendix" and before \chapnum
-	\renewcommand*{\chapternamenum}{%
-		\sidebar{\raisebox{-86.5pt}[0pt][0pt]{\rotatebox[origin=c]{90}{%
-					\resizebox{\midchapskip}{11pt}{\sffamily\colorchaptitle Appendix}}}}}
+	\renewcommand*{\chapternamenum}{}		% No space inserted after "Appendix" and before \chapnum
+	% \renewcommand*{\chapternamenum}{%
+	% 	\sidebar{\raisebox{-86.5pt}[0pt][0pt]{\rotatebox[origin=c]{90}{%
+	% 				\resizebox{\midchapskip}{11pt}{\sffamily\colorchaptitle Appendix}}}}}
 }
 
 \RequirePackage{etoolbox}		% provides \appto command used below (append to)
@@ -535,10 +535,10 @@
 	\renewcommand*{\afterchapternum}{}
 	\renewcommand*{\printchaptername}{}
 	\setlength{\midchapskip}{15mm}
-	% \renewcommand*{\chapternamenum}{}
-	\renewcommand*{\chapternamenum}{%
-		\sidebar{\raisebox{-86.5pt}[0pt][0pt]{\rotatebox[origin=c]{90}{%
-					\resizebox{\midchapskip}{12pt}{\sffamily\colorchaptitle Chapter}}}}}
+	\renewcommand*{\chapternamenum}{}
+	% \renewcommand*{\chapternamenum}{%
+	% 	\sidebar{\raisebox{-86.5pt}[0pt][0pt]{\rotatebox[origin=c]{90}{%
+	% 				\resizebox{\midchapskip}{12pt}{\sffamily\colorchaptitle Chapter}}}}}
 	\renewcommand*{\printchapternum}{%
 		\sidebar{\raisebox{-76pt}[0pt][0pt]{\makebox[0pt][l]{%
 					\resizebox{!}{\midchapskip}{\mhsp\chapnumfont\thechapter}}}}}
