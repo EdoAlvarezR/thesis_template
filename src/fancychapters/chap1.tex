@@ -47,11 +47,11 @@ We can also create figures that place the caption in the side margin. This is a 
 Finally, we can create a figure that spans the width of the text column and the side margin. This option should not be used frequently as it requires some tweaking of the vertical distance of the caption and follow-on text below the figure. It will work robustly when the figure appears at the top or middle of a page, but may push the caption onto the next page when it appears at the bottom. There may be some instances with wide images where the additional manual adjusting is worth the effort.
 
 \begin{figure}[h]
-	\setlength{\sidecapraise}{-1.3cm}   % manual adjustment of figure caption position
+	% \setlength{\sidecapraise}{-1.3cm}   % manual adjustment of figure caption position
 	\begin{sidecaption}{The caption for a full-width figure appears in the margin below it.}[fig:fullwidth] %Such figures utilize the side margin.}
 		\includegraphics[width=1.35\textwidth]{altitude-pitch-all}
 	\end{sidecaption}
-	\vskip -1.7cm     % manual adjustment of position of main text below figure   
+	% \vskip -1.7cm     % manual adjustment of position of main text below figure   
 \end{figure}
 
 \subsubsection{Subsubsection Example}

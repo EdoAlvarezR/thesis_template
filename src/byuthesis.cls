@@ -587,7 +587,8 @@
 
 % ----------- bibliography --------------
 % setup biblatex, specify citation and bibliography styles
-\usepackage[citestyle=verbose-ibid,maxcitenames=1,mincitenames=1,giveninits=true,backend=biber,bibstyle=ieee,sorting=none,uniquelist=true]{biblatex}
+% \usepackage[citestyle=verbose-ibid,maxcitenames=1,mincitenames=1,giveninits=true,backend=biber,bibstyle=ieee,sorting=none,uniquelist=true]{biblatex}
+\usepackage[citestyle=verbose-ibid,maxcitenames=1,mincitenames=1,giveninits=true,backend=biber,bibstyle=authoryear,sorting=nyt,uniquelist=true,dashed=false]{biblatex}
 \DeclareFieldFormat{labelnumberwidth}{\color{primary}#1}%
 \setlength{\biblabelsep}{8pt}%
 \renewbibmacro{in:}{}
@@ -605,6 +606,13 @@
   \clearfield{journaltitle}%
   \clearfield{booktitle}%
   \clearfield{month}%
+  \clearfield{url}%
+  \clearfield{isbn}%
+  \clearfield{issn}%
+  \clearfield{doi}%
+  \clearfield{eprint}%
+}
+\AtEveryBibitem{%
   \clearfield{url}%
   \clearfield{isbn}%
   \clearfield{issn}%
