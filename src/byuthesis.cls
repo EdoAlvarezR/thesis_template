@@ -113,8 +113,9 @@
 \RequirePackage[intoc]{nomencl}
 \makenomenclature
 \renewcommand{\nomname}{Nomenclature\;}  % hack to get spacing in ToC between name and number right
-%\setlength{\nomitemsep}{-\parsep}  % tight single space
-\setlength{\nomitemsep}{0pt}  % relaxed spacing (nominal spacing is looser than this)
+% \setlength{\nomitemsep}{-\parsep}  % tight single space
+% \setlength{\nomitemsep}{0pt}  % relaxed spacing (nominal spacing is looser than this)
+\setlength{\nomitemsep}{-2pt}
 % ---------------------------------------
 
 % ------------------------------
