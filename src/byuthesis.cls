@@ -391,8 +391,6 @@
 			\vspace{\fill}
 			Copyright \textcopyright{} \@copyrightyear{} \@author \\
 			All Rights Reserved
-			\par
-			\enlargethispage{\titlebottomadjust}
 			\clearpage
 		\end{center}
 	\end{Spacing}
