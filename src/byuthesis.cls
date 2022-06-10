@@ -364,7 +364,7 @@
 \newcommand{\titlepage}{%
 	% for fancy style, set the page margins to be equal to center title on page
 	\if@fancy
-		\setlrmarginsandblock{1.75in}{1.75in}{*}
+		\setlrmarginsandblock{1.875in}{1.75in}{*}
 		\checkandfixthelayout
 	\fi
 	\pdfbookmark{TITLE PAGE}{titlepage}
