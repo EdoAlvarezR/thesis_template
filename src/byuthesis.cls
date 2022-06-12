@@ -212,9 +212,9 @@
 %\renewcommand{\cftchapterafterpnum}{\hsp}
 % \renewcommand{\cftsectionleader}{\;\;}
 \renewcommand{\cftsectionafterpnum}{\cftparfillskip}
-\renewcommand{\cftfigureleader}{\;\;}
+% \renewcommand{\cftfigureleader}{\;\;}
 \renewcommand{\cftfigureafterpnum}{\cftparfillskip}
-\renewcommand{\cfttableleader}{\;\;}
+% \renewcommand{\cfttableleader}{\;\;}
 \renewcommand{\cfttableafterpnum}{\cftparfillskip}
 
 % \setpnumwidth{0.0em}  % This, along with \;\; in \cft__leader define the spacing between title and page number
