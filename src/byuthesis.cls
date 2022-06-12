@@ -386,7 +386,7 @@
 				\forlistloop{\@printcommitteemember}{\@committeelist}
 			\end{SingleSpace}
 			\vspace{\fill}
-			\@department \\
+			Department of \@department \\
 			\@institution \\
 			\vspace{\fill}
 			Copyright \textcopyright{} \@copyrightyear{} \@author \\
