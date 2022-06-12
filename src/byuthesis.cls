@@ -303,8 +303,9 @@
 
 
 % -------------- hyperlinks -------------
-\RequirePackage[colorlinks,bookmarks,bookmarksnumbered,allcolors=royal,breaklinks]{hyperref}  % make hyperlinks royal
-%\RequirePackage[colorlinks,bookmarks,bookmarksnumbered,allcolors=black,breaklinks]{hyperref}	   % make hyperlinks black
+% \RequirePackage[colorlinks,bookmarks,bookmarksnumbered,allcolors=royal,breaklinks]{hyperref}  % make hyperlinks royal
+% \RequirePackage[colorlinks,bookmarks,bookmarksnumbered,allcolors=black,breaklinks]{hyperref}	   % make hyperlinks black
+\RequirePackage[hidelinks,bookmarks,bookmarksnumbered,breaklinks]{hyperref} % Don't color hyperlinks
 \RequirePackage[hyphenbreaks]{breakurl}
 % ---------------------------------------
 
