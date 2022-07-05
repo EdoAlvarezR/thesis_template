@@ -17,12 +17,21 @@
 %\DeclareOption{masters}{\@masterstrue}
 \newif\if@phd
 \DeclareOption{phd}{\@phdtrue}
+
+% More format options: print or digital version (digital is default)
+\newif\if@print
+\DeclareOption{print}{\@printtrue}
 % -------------------------------------
 
 % -------- set main options to class -------------
 \DeclareOption*{\PassOptionsToClass{\CurrentOption}{memoir}}
 \ProcessOptions\relax
-\LoadClass[letterpaper,11pt,oneside,openright]{memoir}  % based off of memoir class
+
+\if@print
+	\LoadClass[letterpaper,11pt,twoside,openright]{memoir}  % based off of memoir class
+\else
+	\LoadClass[letterpaper,11pt,oneside,openright]{memoir}  % based off of memoir class
+\fi
 \RequirePackage{memhfixc}  % fix for hyperref w/ memoir
 % ----------------------------------------------
 
@@ -297,6 +306,13 @@
 %\makeevenfoot{byu}%
 %    {\normalfont\small\slshape\thepage}{}{}
 
+\if@print
+	\makeevenhead{byu}%
+	{\normalfont\small\slshape\leftmark}{}{\normalfont\small\slshape\thepage}	% include chapter title
+	\makeevenfoot{byu}%
+	{}{}{}
+\fi
+
 \pagestyle{byu}
 \appto\mainmatter{\pagestyle{byu}}
 % -----------------------------------------------
@@ -414,7 +430,12 @@
 	\pagestyle{empty}
 	\begin{Spacing}{2.2}
 		% \vspace*{116pt}
-		\vspace*{75pt}
+
+		\if@print
+			\vspace*{50pt}
+		\else
+			\vspace*{75pt}
+		\fi
 		\noindent
 		{\color{royal}\Huge\sffamily\itshape\@customtitle} \\
 		\vspace{\fill}
@@ -495,7 +516,11 @@
 % --------------- Part Page Format ---------------
 \renewcommand\part{%
 	\cleardoublepage
-	\setlrmarginsandblock{1.75in}{1.75in}{*}
+	\if@print
+		\setlrmarginsandblock{1.875in}{1.75in}{*}
+	\else
+		\setlrmarginsandblock{1.75in}{1.75in}{*}
+	\fi
 	\checkandfixthelayout
 	\thispagestyle{empty}
 	\if@twocolumn
